@@ -3,6 +3,8 @@ import { businessConfig } from "@/data/businessConfig";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
 
+export const dynamic = "force-static";
+
 const staticRoutes = [
   "",
   "/about",

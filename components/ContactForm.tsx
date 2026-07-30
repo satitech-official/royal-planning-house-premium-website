@@ -2,6 +2,7 @@
 
 import { ChangeEvent, FormEvent, useMemo, useState } from "react";
 import { CheckCircle2, Loader2, Upload } from "lucide-react";
+import { businessConfig } from "@/data/businessConfig";
 
 type ContactFormProps = {
   compact?: boolean;
@@ -121,6 +122,18 @@ export function ContactForm({ compact = false, source = "contact-page" }: Contac
     setServerMessage("");
 
     try {
+      if (process.env.NEXT_PUBLIC_STATIC_EXPORT === "1") {
+        setStatus("success");
+        setServerMessage(
+          `Your enquiry details are validated. Please continue through ${businessConfig.instagramName} until the official email or webhook is connected.`,
+        );
+        setValues(initialValues);
+        setFile(null);
+        setTouched({});
+        event.currentTarget.reset();
+        return;
+      }
+
       const response = await fetch("/api/enquiry", {
         method: "POST",
         body: formData,

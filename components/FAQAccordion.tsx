@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import type { FAQ } from "@/data/faqs";
 
-export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+export function FAQAccordion({ faqs }: { faqs: FAQItem[] }) {
   const [open, setOpen] = useState(0);
 
   return (
