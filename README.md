@@ -1,98 +1,144 @@
-# vinext-starter
+<p align="center">
+  <img src="./public/og.png" alt="Royal Planning House premium architecture website preview" width="100%" />
+</p>
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+<h1 align="center">Royal Planning House Premium Website</h1>
 
-## Prerequisites
+<p align="center">
+  Premium architecture, 2D planning, 3D elevation and Shahi Vastu Kala website built with Next.js, React, Tailwind CSS, Framer Motion, GSAP, Lenis and Swiper.
+</p>
 
-- Node.js `>=22.13.0`
+<p align="center">
+  <a href="https://royal-planning-house.nikhilbaraskar551.chatgpt.site" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-Open%20Website-c89d43?style=for-the-badge&logo=google-chrome&logoColor=102641" alt="Open live demo" />
+  </a>
+  <a href="https://github.com/satitech-official/royal-planning-house-premium-website" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Repository-102641?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub repository" />
+  </a>
+  <a href="https://www.instagram.com/royal_planning_house?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-royal__planning__house-a65336?style=for-the-badge&logo=instagram&logoColor=ffffff" alt="Royal Planning House Instagram" />
+  </a>
+</p>
 
-## Quick Start
+## Live Website
+
+**Production URL:** [https://royal-planning-house.nikhilbaraskar551.chatgpt.site](https://royal-planning-house.nikhilbaraskar551.chatgpt.site)
+
+## Highlights
+
+- Premium royal architecture design system with navy, ivory, champagne gold and brass accents
+- Fully responsive multi-page website for mobile, tablet, laptop and desktop
+- Sticky navigation with dropdowns, mobile menu, consultation modal and active states
+- Home, About, Services, Projects, Project Details, Gallery, FAQs, Contact, Privacy and Terms pages
+- 2D Planning, 3D Elevations, Vastu Design, Residential Projects and Commercial Projects pages
+- Filterable project showcase and masonry gallery with lightbox previews
+- Before-and-after comparison slider for planning/elevation visuals
+- Animated counters, testimonial slider, Vastu compass and blueprint-inspired layouts
+- Contact form with client-side and server-side validation, file checks, spam trap and rate limiting
+- Central data files for business details, services, projects, gallery, FAQs and testimonials
+- SEO metadata, Open Graph image, Twitter preview, sitemap, robots and schema markup
+
+## Pages Included
+
+- `/`
+- `/about`
+- `/services`
+- `/services/[slug]`
+- `/projects`
+- `/projects/[slug]`
+- `/2d-planning`
+- `/3d-elevations`
+- `/vastu-design`
+- `/residential-projects`
+- `/commercial-projects`
+- `/process`
+- `/gallery`
+- `/testimonials`
+- `/faqs`
+- `/contact`
+- `/privacy-policy`
+- `/terms-and-conditions`
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- Tailwind CSS 4
+- Framer Motion
+- GSAP
+- Lenis smooth scroll
+- Swiper
+- Lucide React icons
+- Vinext / Cloudflare-compatible Sites build
+
+## Run Locally
 
 ```bash
 npm install
 npm run dev
+```
+
+Local development URL:
+
+```bash
+http://localhost:5173
+```
+
+Use a custom port if needed:
+
+```bash
+npm run dev -- --port 3107
+```
+
+## Production Build
+
+```bash
 npm run build
 ```
 
-This starter does not use `wrangler.jsonc`.
+## Quality Checks
 
-## Included Shape
-
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```bash
+npm run lint
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+## Editable Content
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+Update business and website content from these files:
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+| File | Purpose |
+| --- | --- |
+| `data/businessConfig.ts` | Business name, contact placeholders, Instagram link, WhatsApp message and stats |
+| `data/services.ts` | Service details, deliverables, FAQs and links |
+| `data/projects.ts` | Project cards, project-detail content and galleries |
+| `data/gallery.ts` | Gallery filters and gallery images |
+| `data/faqs.ts` | FAQ accordion and FAQ schema content |
+| `data/testimonials.ts` | Editable testimonial placeholders |
+| `data/navigation.ts` | Header and footer links |
+| `data/images.ts` | Centralized image URLs and alt text |
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+## Contact Details Notice
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+Official phone number, WhatsApp number, email address and office location are intentionally kept as editable placeholders. Add verified details in `data/businessConfig.ts` before using the site for public business enquiries.
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+## Environment Variables
 
-## Useful Commands
+Create a local `.env` file from `.env.example` when needed:
 
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.example
+ENQUIRY_EMAIL_WEBHOOK_URL=
+ENQUIRY_EMAIL_WEBHOOK_TOKEN=
+```
 
-## Learn More
+`ENQUIRY_EMAIL_WEBHOOK_URL` is optional. Without it, the enquiry API validates the form and returns a success message explaining that email delivery will activate after configuration.
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+## Deployment
+
+The website is deployed with Sites and is live at:
+
+[https://royal-planning-house.nikhilbaraskar551.chatgpt.site](https://royal-planning-house.nikhilbaraskar551.chatgpt.site)
+
+## License
+
+This project is created for Royal Planning House. Review usage rights for images, content and business materials before public commercial use.
