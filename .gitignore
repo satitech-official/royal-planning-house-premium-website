@@ -1,0 +1,82 @@
+# Dependencies and package-manager state
+/node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.npm/
+.pnpm-store/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# Local build output
+/.next/
+/.vinext/
+/dist/
+/out/
+/coverage/
+/storybook-static/
+
+# Cloudflare, Sites, and deployment packaging
+/.wrangler/
+/outputs/
+/work/
+/.sites-package-stage-*/
+*.tar.gz
+*.tgz
+
+# Logs and local preview output
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+dev-server.*.log
+
+# TypeScript and framework generated files
+next-env.d.ts
+*.tsbuildinfo
+
+# Tests and cache folders
+/.nyc_output/
+/.cache/
+/.parcel-cache/
+/.turbo/
+/.eslintcache
+/.stylelintcache
+/playwright-report/
+/test-results/
+
+# Editor and IDE files
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*.swn
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
