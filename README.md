@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://royal-planning-house.nikhilbaraskar551.chatgpt.site" target="_blank">
-    <img src="https://img.shields.io/badge/Live%20Demo-Open%20Website-c89d43?style=for-the-badge&logo=google-chrome&logoColor=102641" alt="Open live demo" />
+    <img src="https://img.shields.io/badge/Owner%20Preview-Open%20Website-c89d43?style=for-the-badge&logo=google-chrome&logoColor=102641" alt="Open owner preview" />
   </a>
   <a href="https://github.com/satitech-official/royal-planning-house-premium-website" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Repository-102641?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub repository" />
@@ -20,9 +20,11 @@
   </a>
 </p>
 
-## Live Website
+## Website Preview
 
-**Production URL:** [https://royal-planning-house.nikhilbaraskar551.chatgpt.site](https://royal-planning-house.nikhilbaraskar551.chatgpt.site)
+**Owner-preview URL:** [https://royal-planning-house.nikhilbaraskar551.chatgpt.site](https://royal-planning-house.nikhilbaraskar551.chatgpt.site)
+
+Public internet publishing is currently disabled for this Sites workspace, so the preview URL may require allowed-owner access. The project is build-ready for public hosting on a platform such as Cloudflare Workers, Vercel, Netlify or another Next.js-compatible host after public hosting access is enabled.
 
 ## Highlights
 
@@ -135,7 +137,7 @@ ENQUIRY_EMAIL_WEBHOOK_TOKEN=
 
 ## Deployment
 
-The website is deployed with Sites and is live at:
+The website is deployed with Sites as an owner-preview deployment:
 
 [https://royal-planning-house.nikhilbaraskar551.chatgpt.site](https://royal-planning-house.nikhilbaraskar551.chatgpt.site)
 
