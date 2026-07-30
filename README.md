@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://royal-planning-house.nikhilbaraskar551.chatgpt.site" target="_blank">
-    <img src="https://img.shields.io/badge/Owner%20Preview-Open%20Website-c89d43?style=for-the-badge&logo=google-chrome&logoColor=102641" alt="Open owner preview" />
+  <a href="https://satitech-official.github.io/royal-planning-house-premium-website/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-Open%20Website-c89d43?style=for-the-badge&logo=google-chrome&logoColor=102641" alt="Open live demo" />
   </a>
   <a href="https://github.com/satitech-official/royal-planning-house-premium-website" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Repository-102641?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub repository" />
@@ -20,11 +20,9 @@
   </a>
 </p>
 
-## Website Preview
+## Live Website
 
-**Owner-preview URL:** [https://royal-planning-house.nikhilbaraskar551.chatgpt.site](https://royal-planning-house.nikhilbaraskar551.chatgpt.site)
-
-Public internet publishing is currently disabled for this Sites workspace, so the preview URL may require allowed-owner access. The project is build-ready for public hosting on a platform such as Cloudflare Workers, Vercel, Netlify or another Next.js-compatible host after public hosting access is enabled.
+**Production URL:** [https://satitech-official.github.io/royal-planning-house-premium-website/](https://satitech-official.github.io/royal-planning-house-premium-website/)
 
 ## Highlights
 
@@ -137,9 +135,9 @@ ENQUIRY_EMAIL_WEBHOOK_TOKEN=
 
 ## Deployment
 
-The website is deployed with Sites as an owner-preview deployment:
+The website is deployed publicly with GitHub Pages:
 
-[https://royal-planning-house.nikhilbaraskar551.chatgpt.site](https://royal-planning-house.nikhilbaraskar551.chatgpt.site)
+[https://satitech-official.github.io/royal-planning-house-premium-website/](https://satitech-official.github.io/royal-planning-house-premium-website/)
 
 ## License
 
